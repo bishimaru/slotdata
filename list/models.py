@@ -5,8 +5,8 @@ from datetime import datetime
 class SlotData(models.Model):
     class Meta:
         db_table = 'data'
-        verbose_name ="データ一覧"
-        verbose_name_plural = 'データ一覧'
+        verbose_name ="スロットデータ"
+        verbose_name_plural = 'スロットデータ'
 
     store_name = models.CharField(max_length=100, verbose_name='店舗名')
     name = models.CharField(max_length=100, verbose_name='機種名')
