@@ -45,7 +45,7 @@
 
                                 <td class="text-center" width="140">
                                     <a
-                                        href="{% url 'list:detail' %}?sn={{ item.store_name }}&date={{ item.date|date:'%Y%m%d' }}">
+                                        href="{% url 'list:detail' %}?sn={{ item.store_name }}&date={{ item.date|date:'Y-m-d' }}">
                                         {{ item.date }}
                                     </a>
                                 </td>
