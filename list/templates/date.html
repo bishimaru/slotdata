@@ -33,7 +33,10 @@
                             <tr>
 
                                 <th class="text-center">日付</th>
+
+                                <th class="text-center">総差枚数</th>
                             </tr>
+
                         </thead>
                         　
                         <!-- ここまでが表の列の定義-->
@@ -48,6 +51,9 @@
                                         href="{% url 'list:detail' %}?sn={{ item.store_name }}&date={{ item.date|date:'Y-m-d' }}">
                                         {{ item.date }}
                                     </a>
+                                </td>
+                                <td class="text-center" width="140">
+                                    {{ payout }}
                                 </td>
 
                             </tr>

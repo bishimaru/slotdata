@@ -9,7 +9,6 @@ env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -17,13 +16,13 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.get_value('DEBUG', cast = bool)
+DEBUG = env.get_value('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
     '118.27.117.87',
     'localhost',
     '127.0.0.1',
-        ]
+]
 
 
 # Application definition
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
     'list',
     'bootstrap4',
     'bootstrapform',
-    ]
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -87,7 +86,7 @@ DATABASES = {
         'PASSWORD': '7234',
         'HOST': 'localhost',
         'PORT': '',
-        }
+    }
 }
 
 
@@ -139,4 +138,3 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-

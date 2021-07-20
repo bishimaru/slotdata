@@ -15,6 +15,10 @@ class SlotData(models.Model):
     bigbonus = models.IntegerField(verbose_name='BB')
     regularbonus = models.IntegerField(verbose_name='RB')
     count =models.IntegerField(verbose_name='総回転数')
+    bbchance = models.CharField(max_length=10, verbose_name='BB確率')
+    rbchance = models.CharField(max_length=10, verbose_name='RB確率')
+    totalchance = models.CharField(max_length=10, verbose_name='合成確率')
+    lastgames = models.IntegerField(verbose_name='宵越し')
     payout = models.IntegerField(verbose_name='差枚数')
     memo = models.CharField(max_length=50, verbose_name='メモ', blank=True, null=True)
 
