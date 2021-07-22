@@ -1,17 +1,17 @@
 from django.db import models
 from datetime import datetime
-
+from django.utils import timezone
 
 class SlotData(models.Model):
     class Meta:
-        db_table = 'data'
+        db_table = 'slotdata'
         verbose_name ="スロットデータ"
         verbose_name_plural = 'スロットデータ'
 
     store_name = models.CharField(max_length=100, verbose_name='店舗名')
     name = models.CharField(max_length=100, verbose_name='機種名')
     number = models.IntegerField(verbose_name='台番号')
-    date = models.DateField(verbose_name='日付', default=datetime.now())
+    date = models.DateField(verbose_name='日付', default=timezone.now)
     bigbonus = models.IntegerField(verbose_name='BB')
     regularbonus = models.IntegerField(verbose_name='RB')
     count =models.IntegerField(verbose_name='総回転数')

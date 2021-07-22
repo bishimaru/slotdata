@@ -14,13 +14,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='slotdata',
             name='bbchance',
-            field=models.CharField(default=0.3333333333333333, max_length=10, verbose_name='BB確率'),
+            field=models.CharField(default=1.0, max_length=10, verbose_name='BB確率'),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='slotdata',
             name='rbchance',
-            field=models.CharField(default=0.3333333333333333, max_length=10, verbose_name='RB確率'),
+            field=models.CharField(default=1.0, max_length=10, verbose_name='RB確率'),
             preserve_default=False,
         ),
         migrations.AddField(
